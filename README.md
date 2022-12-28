@@ -46,4 +46,16 @@ If your host doesn't have paxutil, you must download and extract the appropriate
  paxctl -c -m ~/.dotnet/dotnet
 ```
 
+You should add the following to ~/.bash_profile or ~/.bashrc - at the beginning, before any checks for interactive sessions:
+
+```
+export DOTNET_ROOT=$HOME/.dotnet
+export PATH=$PATH:$HOME/.dotnet:$HOME/.dotnet/tools
+export COMPlus_EnableDiagnostics=0
+```
+
 After patching dotnet, you should be able to create, build and run projects!
+
+TODO: Write a script to do it automatically
+TODO: How to handle updates
+TODO: Getting apache to reverse-proxy ASP.NET
